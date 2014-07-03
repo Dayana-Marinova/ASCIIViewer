@@ -8,14 +8,14 @@ import javax.imageio.ImageIO;
 
 public class ASCIIViewer {
     private final static int columns = 140;
+    private BufferedImage image;
+    private int scale;
 
     public static void main(String[] args) throws IOException {
         ASCIIViewer viewer = new ASCIIViewer(new File(args[0]));
         System.out.println(viewer.toString());
     }
 
-    private BufferedImage image;
-    private int scale;
 
     public ASCIIViewer(File file) throws IOException {
         image = ImageIO.read(file);

@@ -76,7 +76,7 @@ public class PlayerUtils {
                 for (int x = 0; x < this.image.getWidth() - scale; x += scale) {
                     result += pixelToChar(getBlockIntensity(x, y));
                 }
-                result += "\n";
+                result += System.lineSeparator();
             }
             return result;
         }
